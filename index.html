@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>福建省普通高校招生考生成绩查询</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<table class="main-table">
+			<tr>
+				<td class="title-cell qwq">福建省普通高校招生考生成绩查询</td>
+			</tr>
+			<tr>
+				<td class="form-cell">
+					<form
+						name="gkcjForm"
+						method="post"
+						action="https://gk.eeafj.cn/gkcj.shtml"
+					>
+						<input type="hidden" name="method" value="query" />
+						<table class="form-table">
+							<tr>
+								<td class="label-cell">
+									<div align="right">账号：</div>
+								</td>
+								<td class="input-cell">
+									<input
+										type="text"
+										name="logname"
+										id="logname"
+										value=""
+										maxlength="30"
+										class="form-input"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td class="label-cell">
+									<div align="right">密码：</div>
+								</td>
+								<td class="input-cell">
+									<input
+										type="password"
+										name="pwd"
+										id="pwd"
+										value=""
+										maxlength="30"
+										class="form-input"
+									/>
+									<a
+										href="https://gk.eeafj.cn/login.shtml?method=autoLogin"
+										class="footer-link"
+										>忘记密码</a
+									>
+								</td>
+							</tr>
+							<tr>
+								<td class="label-cell">
+									<div align="right">考生号：</div>
+								</td>
+								<td class="input-cell">
+									<input
+										type="text"
+										name="ksh"
+										id="ksh"
+										value=""
+										class="form-input"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="input-cell">
+									<div class="note-text">
+										注释：不要将考生号输错成准考证号
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="button-cell" colspan="2">
+									<input
+										type="button"
+										name="findbtn"
+										id="findbtn"
+										value=" 查询 "
+										onclick="find(event)"
+										class="btn_button"
+									/>
+									<input
+										type="button"
+										name="restbtn"
+										id="restbtn"
+										value=" 重置 "
+										onclick="rest()"
+										class="btn_button"
+									/>
+									<div id="loadingText" class="loading-text">
+										正在查询，请稍候...
+									</div>
+									<div
+										id="errorMessage"
+										class="error-message"
+									></div>
+									<div
+										id="successMessage"
+										class="success-message"
+									></div>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</td>
+			</tr>
+		</table>
+
+		<script src="MD5.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
